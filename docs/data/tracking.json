@@ -1,1 +1,17 @@
-{"summarizedPmids":[],"dailyReports":[]}
+{
+  "summarizedPmids": [
+    "42058080",
+    "42051468",
+    "42015133",
+    "42040942",
+    "42011975",
+    "42054728"
+  ],
+  "dailyReports": [
+    {
+      "date": "2026-05-12",
+      "file": "md-2026-05-12.html",
+      "count": 6
+    }
+  ]
+}
