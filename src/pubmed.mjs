@@ -23,7 +23,7 @@ async function pubmedGet(endpoint, params) {
 async function searchPapers(query, dateRange) {
   const xml = await pubmedGet('esearch.fcgi', {
     db: 'pubmed',
-    term: `${query} AND "${dateRange.mindate}"[Date - Publication] : "${dateRange.maxdate}"[Date - Publication]`,
+    term: `${query} AND "${dateRange.mindate}"[EDAT] : "${dateRange.maxdate}"[EDAT]`,
     retmax: '50',
     retmode: 'xml',
     sort: 'date'

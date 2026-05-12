@@ -1,19 +1,23 @@
 const SEARCH_QUERIES = [
   {
     name: 'Core MD',
-    query: '("muscle dysmorphia"[Title/Abstract] OR "muscle dysmorphic disorder"[Title/Abstract] OR bigorexia[Title/Abstract] OR "reverse anorexia"[Title/Abstract])'
+    query: '("muscle dysmorphia"[Title/Abstract] OR "muscle dysmorphic disorder"[Title/Abstract] OR bigorexia[Title/Abstract] OR "reverse anorexia"[Title/Abstract] OR megarexia[Title/Abstract])'
   },
   {
-    name: 'Drive for Muscularity + ED',
-    query: '("drive for muscularity"[Title/Abstract] AND ("eating disorder*"[Title/Abstract] OR "disordered eating"[Title/Abstract] OR orthorexia[Title/Abstract]))'
+    name: 'Drive for Muscularity',
+    query: '("drive for muscularity"[Title/Abstract] OR "muscularity-oriented"[Title/Abstract] OR "muscle dissatisfaction"[Title/Abstract])'
   },
   {
     name: 'BDD + Muscularity',
     query: '("body dysmorphic disorder"[Title/Abstract] AND (muscle*[Title/Abstract] OR muscularity[Title/Abstract] OR bodybuilding[Title/Abstract]))'
   },
   {
+    name: 'Male Body Image + Eating',
+    query: '(("male body image"[Title/Abstract] OR "drive for muscularity"[Title/Abstract]) AND ("eating disorder*"[Title/Abstract] OR "disordered eating"[Title/Abstract] OR orthorexia[Title/Abstract]))'
+  },
+  {
     name: 'AAS + Body Image',
-    query: '(("anabolic-androgenic steroid*"[Title/Abstract] OR AAS[Title/Abstract] OR IPED[Title/Abstract] OR APED[Title/Abstract]) AND ("body image"[Title/Abstract] OR "body dissatisfaction"[Title/Abstract] OR "muscle dysmorphia"[Title/Abstract]))'
+    query: '(("anabolic-androgenic steroid*"[Title/Abstract] OR AAS[Title/Abstract] OR IPED[Title/Abstract] OR APED[Title/Abstract] OR "performance-enhancing drug*"[Title/Abstract]) AND ("body image"[Title/Abstract] OR "body dissatisfaction"[Title/Abstract] OR "muscle dysmorphia"[Title/Abstract]))'
   },
   {
     name: 'Exercise Addiction',
@@ -38,6 +42,10 @@ const SEARCH_QUERIES = [
   {
     name: 'Adolescent MD',
     query: '(("muscle dysmorphia"[Title/Abstract] OR "drive for muscularity"[Title/Abstract] OR "muscularity-oriented"[Title/Abstract]) AND (adolescent*[Title/Abstract] OR youth[Title/Abstract] OR "young adult*"[Title/Abstract] OR boys[Title/Abstract]))'
+  },
+  {
+    name: 'Muscle Dissatisfaction + Gym',
+    query: '("muscle dissatisfaction"[Title/Abstract] OR "muscularity dissatisfaction"[Title/Abstract] AND (gym[Title/Abstract] OR bodybuilding[Title/Abstract] OR "weight training"[Title/Abstract] OR "resistance training"[Title/Abstract]))'
   }
 ];
 
@@ -69,6 +77,6 @@ const SITE_CONFIG = {
 };
 
 const PUBMED_BASE = 'https://eutils.ncbi.nlm.nih.gov/entrez/eutils';
-const DAYS_TO_FETCH = 7;
+const DAYS_TO_FETCH = 30;
 
 export { SEARCH_QUERIES, AI_MODELS, AI_CONFIG, SITE_CONFIG, PUBMED_BASE, DAYS_TO_FETCH };
