@@ -4,9 +4,9 @@ import { loadTracking, saveTracking, filterNewArticles, updateTracking } from '.
 import { writeHtmlReport } from './html.mjs';
 
 async function main() {
-  const apiKey = process.env.ZHIPU_API_KEY;
+  const apiKey = process.env.NVIDIA_API_KEY;
   if (!apiKey) {
-    console.error('❌ ZHIPU_API_KEY environment variable is required');
+    console.error('❌ NVIDIA_API_KEY environment variable is required');
     process.exit(1);
   }
 

@@ -158,7 +158,7 @@ function createFallbackAnalysis(articles) {
   };
 }
 
-async function callZhipuAPI(apiKey, model, messages) {
+async function callNvidiaAPI(apiKey, model, messages) {
   const controller = new AbortController();
   const timeoutId = setTimeout(() => controller.abort(), AI_CONFIG.timeout);
 
@@ -173,7 +173,10 @@ async function callZhipuAPI(apiKey, model, messages) {
         model,
         messages,
         max_tokens: AI_CONFIG.maxTokens,
-        temperature: AI_CONFIG.temperature
+        temperature: AI_CONFIG.temperature,
+        top_p: AI_CONFIG.topP,
+        stream: false,
+        chat_template_kwargs: { enable_thinking: false }
       }),
       signal: controller.signal
     });
@@ -221,7 +224,7 @@ export async function analyzeArticles(articles, apiKey) {
     for (const model of AI_MODELS) {
       try {
         console.log(`   Trying model: ${model}`);
-        const raw = await callZhipuAPI(apiKey, model, messages);
+        const raw = await callNvidiaAPI(apiKey, model, messages);
         result = robustJsonParse(raw);
         if (result) {
           usedModel = model;

@@ -1,4 +1,4 @@
-const SEARCH_QUERIES = [
+﻿const SEARCH_QUERIES = [
   {
     name: 'Core MD',
     query: '("muscle dysmorphia"[Title/Abstract] OR "muscle dysmorphic disorder"[Title/Abstract] OR bigorexia[Title/Abstract] OR "reverse anorexia"[Title/Abstract] OR megarexia[Title/Abstract])'
@@ -49,13 +49,14 @@ const SEARCH_QUERIES = [
   }
 ];
 
-const AI_MODELS = ['glm-5-turbo', 'glm-4.7', 'glm-4.7-flash'];
+const AI_MODELS = ['nvidia/nemotron-3-super-120b-a12b', 'nvidia/nemotron-3-nano-30b-a3b'];
 
 const AI_CONFIG = {
-  apiUrl: 'https://open.bigmodel.cn/api/coding/paas/v4/chat/completions',
-  maxTokens: 50000,
+  apiUrl: 'https://integrate.api.nvidia.com/v1/chat/completions',
+  maxTokens: 16384,
   timeout: 480000,
-  temperature: 0.3
+  temperature: 1.0,
+  topP: 0.95
 };
 
 const SITE_CONFIG = {

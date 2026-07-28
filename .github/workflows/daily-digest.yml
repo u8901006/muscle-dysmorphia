@@ -29,7 +29,7 @@ jobs:
 
       - name: Run daily digest
         env:
-          ZHIPU_API_KEY: ${{ secrets.ZHIPU_API_KEY }}
+          NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
           NODE_OPTIONS: '--max-old-space-size=4096'
         run: node src/main.mjs
 

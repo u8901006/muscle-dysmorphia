@@ -211,7 +211,7 @@ export function generateDailyReport(analysis, dateStr) {
       <div class="header-meta">
         <span class="badge badge-date">\u{1F4C5} ${formatDateZh(dateStr)}</span>
         <span class="badge badge-count">\u{1F4CA} ${analysis.articles.length} \u7BC7\u6587\u737B</span>
-        <span class="badge badge-source">Powered by PubMed + Zhipu AI</span>
+        <span class="badge badge-source">Powered by PubMed + NVIDIA AI</span>
       </div>
     </div>
   </header>
@@ -237,7 +237,7 @@ ${analysis.keywords.length > 0 ? `  <div class='keywords-section section'><div c
   </div>
 
   <footer>
-    <span>\u8CC7\u6599\u4F86\u6E90\uFF1APubMed &middot; \u5206\u6790\u6A21\u578B\uFF1AZhipu AI</span>
+    <span>\u8CC7\u6599\u4F86\u6E90\uFF1APubMed &middot; \u5206\u6790\u6A21\u578B\uFF1ANVIDIA AI</span>
     <span><a href="https://github.com/u8901006/muscle-dysmorphia">GitHub</a></span>
   </footer>
 </div>
@@ -291,7 +291,7 @@ export function generateIndex(tracking) {
     ${generateFooterLinksHtml()}
   </div>
   <footer>
-    <p>Powered by PubMed + Zhipu AI \u00B7 <a href="https://github.com/u8901006/muscle-dysmorphia">GitHub</a></p>
+    <p>Powered by PubMed + NVIDIA AI \u00B7 <a href="https://github.com/u8901006/muscle-dysmorphia">GitHub</a></p>
   </footer>
 </div>
 </body>
